@@ -1,43 +1,49 @@
-const express = require('express')
-const app = express()
-
-const path = require('path')
-const publicPath = path.resolve(__dirname,"./public")
-
+const express = require('express');
+const session = require('express-session');
+const cookies = require('cookie-parser');
+const path = require('path');
 const methodOverride = require('method-override')
 
-const productsRouter = require('./src/routes/productsRouter.js')
+const app = express();
 
-const usersRouter = require('./src/routes/usersRouter')
+const userLoggedMiddleware = require('./middlewares/userLoggedMiddleware');
 
-// pa requerir session
-const session = require ('express-session');
-const recordameMiddleware = require('./src/middlewares/recordameMiddleware.js');
-const bcrypt = require ('bcryptjs');
-const cookieParser = require('cookie-parser')
+app.use(session({
+	secret: "Shhh, It's a secret",
+	resave: false,
+	saveUninitialized: false,
+}));
 
-app.use(express.urlencoded({extended: true}))
+app.use(cookies());
 
-app.use(express.json())
+app.use(userLoggedMiddleware);
 
-app.use(express.static(publicPath))
+app.use(express.urlencoded({ extended: false }));
+
+app.use(express.static('./public'));
 
 app.use(methodOverride('_method'))
 
-app.use('/', [usersRouter, productsRouter])
-
-app.use(session({secret: 'secreto'}))
-
-app.use(cookieParser);
-
-app.use(recordameMiddleware);
-
+// Template Engine
 app.set('view engine', 'ejs')
 
 app.set('views', [
-    path.join(__dirname, './src/views'),
-    path.join(__dirname, './src/views/products') ,
-    path.join(__dirname, './src/views/users') 
+    path.join(__dirname, './views'),
+    path.join(__dirname, './views/product') ,
+    path.join(__dirname, './views/users') 
 ])
 
-app.listen(3000, () => { console.log('Server running...') })
+// Routers
+const mainRoutes = require('./routes/mainRoutes');
+
+const userRoutes = require('./routes/userRoutes');
+
+const productRouter = require('./routes/productRoutes')
+
+app.use('/', mainRoutes);
+
+app.use('/user', userRoutes);
+
+app.use('/products', productRouter)
+
+app.listen(3001, () => console.log('Servidor levantado en el puerto 3001'));

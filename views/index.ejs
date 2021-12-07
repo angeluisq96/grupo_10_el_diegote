@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<%- include('partials/head'); %>
+
+<body>
+
+	<%- include('partials/navbar'); %>
+	
+    <section class="banner">
+        <img src="images/diego-banner.png" alt="Banner de ofertas">
+    </section>
+
+    <section id = "products-home">
+        <p class = "list-title"> Ofertas de la semana</p>
+        <section class="products-list" id="offers-list">
+            <% products.forEach(product=>{%>
+                <% if(product.category == 'offer'){%>
+                    <article>
+                        <img class= "image" src=<%= product.image %>>
+                        <a href="products/<%=product.id%>" class="article-description">
+                            <p class="name"><%= product.name %></p>
+                            <p class="price">$<%= product.price %>-</p>
+                       </a>
+                    </article>
+            <%}})%>
+        </section>
+
+        <p class = "list-title"> Favoritas de la casa</p>
+        <section class="products-list" id="favs-list">
+            <% products.forEach(product=>{%>
+                <% if(product.category == 'favs'){%>
+                    <article>
+                        <img class= "image" src=<%= product.image %>>
+                        <a href="products/<%=product.id%>" class="article-description">
+                            <p class="name"><%= product.name %></p>
+                            <p class="price">$<%= product.price %>-</p>
+                       </a>
+                    </article>
+            <%}})%>
+        </section>
+    
+        <p class = "list-title"> Todas nuestras pizzas</p>
+        <section class="products-list" id="full-list">
+            <% products.forEach(product=>{%>
+                <% if(product.category != "drinks"){ %>
+                <article>
+                    <img class= "image" src=<%= product.image %>>
+                    <a href="products/<%=product.id%>" class="article-description">
+                        <p class="name"><%= product.name %></p>
+                        <p class="price">$<%= product.price %>-</p>
+                   </a>
+                </article>
+            <%}})%>
+        </section>
+    </section>
+
+    <p class = "list-title"> Bebidas</p>
+    <section class="products-list" >
+        <% products.forEach(product=>{%>
+            <% if(product.category == 'drinks'){%>
+                <article id="drink">
+                    <img class= "image" src=<%= product.image %>>
+                    <a href="products/<%=product.id%>" class="article-description">
+                        <p class="name"><%= product.name %></p>
+                        <p class="price">$<%= product.price %>-</p>
+                   </a>
+                </article>
+        <%}})%>
+    </section>
+
+    <section>
+        <a href="/products/create" class="a-admin">
+             <button class= "admin-button"type="button"> Agregar nuevo producto</button>
+        </a>
+    </section>
+	
+	<%- include('partials/footer'); %>
+</body>
+</html>

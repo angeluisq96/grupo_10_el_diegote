@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+
+<%-  include('./partials/head.ejs') %>
+
+<body>
+
+    <%-  include('./partials/navbar.ejs') %>
+
+    <main id="description-main">
+        
+        <div id="description-div-container">
+    
+            <section id= "text-section">
+                <section id= "details-section">
+                    <p id = "description-name"><%= product.name%></p>
+                    <p id = "description-price">$<%= product.price%>-</p>
+                    <p id = "description-description">~ <%= product.description%> ~</p>
+                </section>
+                <section id="options-section">
+                    <form>
+
+                        <%if(product.category != "drinks"){%>
+                        <div>
+                            <label for="tamaño" class="form-label-description">Tamaño:</label>
+                            <select name="tamaño" id="tamaño" class="form-input-description">
+                                <option value="pequeña">Pequeña</option>
+                                <option value="mediana">Mediana</option>
+                                <option value="grande">Grande</option>
+                            </select>
+                        </div>
+                        <%}%>
+
+                        <div>
+                            <label for="cantidad" class="form-label-description">Cantidad:</label>
+                            <input type="text" id="cantidad" name="cantidad" placeholder= "1" class="form-input-description">
+                        </div>
+                    </form>
+                </section>
+                <section id = "buttons-section">
+                    <div>
+                        <button type="button" class="button-buy">Comprar ahora</button>
+                    </div>
+    
+                    <div>
+                        <button type="button" class="button-buy" id="button-add-to-cart">Agregar al carrito</button>
+                    </div>    
+                </section>
+            </section>
+
+            <section id = "image-section">
+                <img id="description-image" src=<%= product.image %>
+            </section>
+        </div>
+    </main>
+
+    <section id = "edit-admin-buttons">
+
+        <section>
+            <a href= <%= editURL %>>
+                 <button class= "admin-button"type="button"> Editar </button>
+            </a>
+        </section>
+    
+    <form  id = "edit-delete-form" method="POST" action = "/products/<%= product.id %>?_method=DELETE"> 
+            <button type="submit" id="delete-button"class="admin-button">Eliminar</button>
+    </form> 
+    </section>
+
+    <%-  include('./partials/footer.ejs') %>
+    
+</body>

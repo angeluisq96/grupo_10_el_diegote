@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+
+<%-  include('./partials/head.ejs') %>
+
+<body>
+
+    <%-  include('./partials/navbar.ejs') %>
+    
+    <form id = "create-form" class = "product-form" method="POST" action = "/products" enctype="multipart/form-data">
+        <h3>Cargar pizza</h3>
+        <div>
+            <div>
+                <label for="name" class="form-label">Nombre del producto:</label>
+                <input type="text" id="name" name="name" placeholder="Ej: Napolitana" class="form-input" required>
+            </div>
+            <div>
+                <label for="price" class="form-label">Precio del producto:</label>
+                <input type="text" id="price" name="price" placeholder="" class="form-input" required>
+            </div>
+            <div>
+                <label for="category" class="form-label">Categoría:</label>
+                <select name="category" id="category" class="form-input"  required>
+                    <option value="">Elegí</option>
+                    <option value="offer">En oferta</option>
+                    <option value="favs">Favoritas</option>
+                    <option value="default">Pizzas</option>
+                    <option value="drinks">Bebidas</option>
+                </select>
+            </div>
+            <div>
+                <label for="image" class="form-label">Imagen:</label>
+                <input type="file" id="image" name="image" placeholder="" class="form-input" required>
+            </div>
+
+            <div>
+                <label for="description" class="form-label">Descipción:</label>
+                <textarea name="description" id="description" class="form-input" required></textarea>
+            </div>
+        
+            <div>
+                <button type="submit" class="button-save">Guardar producto</button>
+                <a class="product-form-cancel"href="/">
+                    <button type="button" class="button-save" id="button-cancel">Cancelar</button>
+                </a>
+            </div>
+        </div>
+    </form>
+
+    <%-  include('./partials/footer.ejs') %>
+    
+</body>
