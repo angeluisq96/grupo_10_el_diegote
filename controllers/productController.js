@@ -24,7 +24,7 @@ let productsController = {
         }
     },
     create: (req,res) => {         
-        res.send('create')
+        res.render('create')
     },
     store: (req,res) => {
         let product = req.body
@@ -33,7 +33,7 @@ let productsController = {
         products.push(product)
 
         fs.writeFileSync(jsonPath, JSON.stringify(products,null,''))
-        res.redirect('/products')
+        res.redirect('/')
     },
     update: (req,res) => {
         console.log('Entro Aqui')
@@ -46,14 +46,14 @@ let productsController = {
         }
 
         fs.writeFileSync(jsonPath, JSON.stringify(products, null, ''))
-        res.redirect('/products')
+        res.redirect('/')
     },
     delete: (req,res) => {
         for(let i = 0; i < products.length; i++)
         if(products[i].id == req.params.id) products.splice(i,1)
 
         fs.writeFileSync(jsonPath, JSON.stringify(products, null, ''))
-        res.redirect('/products') 
+        res.redirect('/') 
     },
 }
 
