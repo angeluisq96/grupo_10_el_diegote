@@ -3,6 +3,8 @@
 <%- include('partials/head'); %>
 <body>
 	<%- include('partials/navbar'); %>
+
+	<br><a class="back-home" href= "/"> <img id="el-diegote-logo" src="./images/el-diegote-logo.png">   </a><br>
 	
 	<!-- Register-Form -->
 	<div class="container my-5">
@@ -14,8 +16,8 @@
 					<div class="row">
 						<div class="col-md-6 my-1">
 							<div class="form-group">
-								<label><b>Nombre completo:</b></label>
-								<input 
+								<label><b> </b></label>
+								<input placeholder="Nombre completo"
 									type="text" 
 									name="fullName" 
 									class="form-control <%= locals.errors && errors.fullName ? 'is-invalid' : null %>"
@@ -30,8 +32,9 @@
 						</div>
 						<div class="col-md-6 my-1">
 							<div class="form-group">
-								<label><b>Correo electrónico:</b></label>
+								<label><b></b></label>
 								<input 
+									placeholder="Correo electrónico"
 									type="text" 
 									name="email" 
 									class="form-control <%= locals.errors && errors.email ? 'is-invalid' : null %>"
@@ -46,8 +49,9 @@
 						</div>
 						<div class="col-md-6 my-1">
 							<div class="form-group">
-								<label><b>Password:</b></label>
+								<label><b></b></label>
 								<input 
+									placeholder="Password"
 									type="password" 
 									name="password" 
 									class="form-control <%= locals.errors && errors.password ? 'is-invalid' : null %>"
@@ -61,7 +65,7 @@
 						</div>
 						<div class="col-md-6 my-1">
 							<div class="form-group">
-								<label><b>País de nacimiento:</b></label>
+								<label><b> </b></label>
 								<select 
 									name="country" 
 									class="form-select <%= locals.errors && errors.country ? 'is-invalid' : null %>"
