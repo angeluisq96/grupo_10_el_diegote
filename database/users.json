@@ -1,14 +1,7 @@
 [
+ 
  {
   "id": 1,
-  "fullName": "Javi Herrera",
-  "email": "javi@dh.com",
-  "password": "$2a$10$kbHNepDXku1qKDytFK3RpuLtkW/dqMGDi4jXL7lNQUF8lm1HZ2.N.",
-  "country": "Colombia",
-  "avatar": "1609285636788_img.jpg"
- },
- {
-  "id": 2,
   "fullName": "angel luis",
   "email": "angeluisq96@gmail.com",
   "password": "$2a$10$3CgukaYl5DA6RukIruNS4OhrRws58EruAlBdHvM9t/wMiQLvA.eoi",
@@ -22,5 +15,13 @@
   "password": "$2a$10$eYA4Xk0BHMaRF96vBo4BduiXtzu4x2p96REHLXl/F0WP3sOwPbrfy",
   "country": "Bolivia",
   "avatar": "1638833028909_img.png"
+ },
+ {
+  "id": 4,
+  "fullName": "solismarcosdaniel@gmail.com",
+  "email": "solismarcosdaniel@gmail.com",
+  "password": "dani",
+  "country": " ",
+  "avatar": " "
  }
 ]

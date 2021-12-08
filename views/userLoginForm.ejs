@@ -15,13 +15,13 @@
 				<!-- <h2>Iniciar sesión</h2> -->
 	
 				<form method="POST" action="/user/login">
-					<a class="back-home" href= "/"> <img id="el-diegote-logo" src="./images/el-diegote-logo.png">   </a>
+					<br><a class="back-home" href= "/"> <img id="el-diegote-logo" src="./images/el-diegote-logo.png">   </a>
 					<p  class="form-title" id="title-login">Iniciar sesión</a><br><br>
 					<div class="row">
 						<div class="col-md-6 my-2">
 							<section id="login">
 								<div class="form-group">
-									<label><b>Correo electrónico:</b></label>
+									<label><b> </b></label>
 									<input type="text" name="email" class="form-control" id="input-username" placeholder="Nombre de usuario">
 									<% if (locals.errors && errors.email) { %>
 										<div class="text-danger">
@@ -32,7 +32,7 @@
 							</div>
 							<div class="col-md-6 my-2">
 								<div class="form-group">
-									<label><b>Password:</b></label>
+									<label><b> </b></label>
 									<input type="password" name="password" class="form-control" placeholder="Ingresa tu contraseña" id="pass">
 									<div class="invalid-feedback">
 									</div>
