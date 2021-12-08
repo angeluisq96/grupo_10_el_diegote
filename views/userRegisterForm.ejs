@@ -17,7 +17,7 @@
 						<div class="col-md-6 my-1">
 							<div class="form-group">
 								<label><b> </b></label>
-								<input placeholder="Nombre completo"
+								<input id="input-register" placeholder="Nombre completo"
 									type="text" 
 									name="fullName" 
 									class="form-control <%= locals.errors && errors.fullName ? 'is-invalid' : null %>"
@@ -33,7 +33,7 @@
 						<div class="col-md-6 my-1">
 							<div class="form-group">
 								<label><b></b></label>
-								<input 
+								<input id="input-register"
 									placeholder="Correo electrónico"
 									type="text" 
 									name="email" 
@@ -50,7 +50,7 @@
 						<div class="col-md-6 my-1">
 							<div class="form-group">
 								<label><b></b></label>
-								<input 
+								<input id="input-register"
 									placeholder="Password"
 									type="password" 
 									name="password" 
@@ -66,7 +66,7 @@
 						<div class="col-md-6 my-1">
 							<div class="form-group">
 								<label><b> </b></label>
-								<select 
+								<select id="input-register"
 									name="country" 
 									class="form-select <%= locals.errors && errors.country ? 'is-invalid' : null %>"
 								>
@@ -90,7 +90,7 @@
 						</div>
 						<div class="col-md-6 my-1">
 							<div class="form-group">
-								<label><b>Imagen de perfil:</b></label>
+								<label><b>Imagen de perfil</b></label>
 								<input 
 									type="file" 
 									name="avatar"
