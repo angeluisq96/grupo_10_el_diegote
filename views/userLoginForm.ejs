@@ -5,32 +5,42 @@
 	<%- include('partials/navbar'); %>
 	
 	<!-- Login-Form -->
+	<!-- <div>
+		<img src="images/el-diegote-logo.PNG" alt="logo">
+
+	</div> -->
 	<div class="container my-5">
 		<div class="row justify-content-center">
 			<div class="col-md-10">
-				<h2>Formulario de Login</h2>
+				<!-- <h2>Iniciar sesión</h2> -->
 	
 				<form method="POST" action="/user/login">
+					<a class="back-home" href= "/"> <img id="el-diegote-logo" src="./images/el-diegote-logo.png">   </a>
+					<p  class="form-title" id="title-login">Iniciar sesión</a><br><br>
 					<div class="row">
 						<div class="col-md-6 my-2">
-							<div class="form-group">
-								<label><b>Correo electrónico:</b></label>
-								<input type="text" name="email" class="form-control">
-								<% if (locals.errors && errors.email) { %>
-									<div class="text-danger">
-										<%= errors.email.msg %>
-									</div>
-								<% } %>
-							</div>
-						</div>
-						<div class="col-md-6 my-2">
-							<div class="form-group">
-								<label><b>Password:</b></label>
-								<input type="password" name="password" class="form-control">
-								<div class="invalid-feedback">
+							<section id="login">
+								<div class="form-group">
+									<label><b>Correo electrónico:</b></label>
+									<input type="text" name="email" class="form-control" id="input-username" placeholder="Nombre de usuario">
+									<% if (locals.errors && errors.email) { %>
+										<div class="text-danger">
+											<%= errors.email.msg %>
+										</div>
+									<% } %>
 								</div>
 							</div>
-						</div>
+							<div class="col-md-6 my-2">
+								<div class="form-group">
+									<label><b>Password:</b></label>
+									<input type="password" name="password" class="form-control" placeholder="Ingresa tu contraseña" id="pass">
+									<div class="invalid-feedback">
+									</div>
+								</div>
+							</div>
+
+
+							</section>
 						<div class="col-md-6 my-2">
 							<div class="form-group form-check">
 								<label class="form-check-label">

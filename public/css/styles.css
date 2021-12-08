@@ -619,3 +619,10 @@ form div{
         height: 340px;
     }
 }
+
+#login input {
+    border: 2px solid lightblue
+}
+#pass{
+    border: 2px solid lightblue
+}

@@ -6,7 +6,7 @@ const methodOverride = require('method-override')
 
 const app = express();
 
-// const publicPath = path.resolve(__dirname,"./public")
+const publicPath = path.resolve(__dirname,"./public")
 
 const userLoggedMiddleware = require('./middlewares/userLoggedMiddleware');
 
