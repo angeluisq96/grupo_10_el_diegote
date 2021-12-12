@@ -630,3 +630,9 @@ form div{
 #input-register{
     border: 2px solid lightblue
 }
+
+#logo-l-r{
+    align-content: center;
+    align-items: center;
+    text-align: center;
+}
