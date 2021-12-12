@@ -48,4 +48,4 @@ app.use('/user', userRoutes);
 
 app.use('/products', productRouter)
 
-app.listen(3001, () => console.log('Servidor levantado en el puerto 3001'));
+app.listen(3001, () => console.log('Servidor en el puerto 3001'));
