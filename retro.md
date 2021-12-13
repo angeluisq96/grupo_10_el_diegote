@@ -124,3 +124,38 @@
 * Perder el foco en las weekly 
 
 
+## Sprint 6
+
+#### Comenzar a hacer: 
+
+* Comenzar a organizar y asignar las tareas desde el lanzamiento del Sprint. 
+
+* Finalizado el Sprint realizar una meeting para correjir y compartir experiencias.
+
+#### Hacer más:
+
+* Reuniones mas seguidas y consultas al grupo de whatsapp
+
+* Consultar y resolver de manera temprana los inconvenientes que aparecen durante el Sprint. 
+
+* Charlar sobre los tiempos libres de cada integrante para las distintas reuniones, dudas y problemas del sprint.
+
+#### Continuar haciendo:
+
+* Reuniones semanales entre la semana 
+
+* Mantener una comunicacion fluida a diario 
+
+* Mantener el buen orden y buen clima del grupo.
+
+* Guiarnos en base al tablero de trabajo 
+
+#### Hacer menos:
+
+* No controlar el avanze del sprint y no plantearse el compromiso con el sprint
+
+#### Dejar de hacer:
+
+* No profundizar en los temas y contenido a resolver.
+
+
