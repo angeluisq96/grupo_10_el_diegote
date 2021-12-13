@@ -5,6 +5,7 @@
     padding: 0px;
 }
 body{
+    text-align: center;
     margin-top: 10px;
 }
 
@@ -501,6 +502,10 @@ form div{
         width: 27%;
         height: 280px;
     }
+    a.nav-link {
+        color: black;
+        font-size: 30px;
+    }
 }
 
 @media(min-width: 601px){
@@ -579,6 +584,10 @@ form div{
         width: 26%;
         height: auto;
     }
+    a.nav-link {
+        color: black;
+        font-size: 30px;
+    }
 }
 
 @media(min-width: 1075px){
@@ -618,6 +627,10 @@ form div{
     .image{
         height: 340px;
     }
+    a.nav-link {
+        color: black;
+        font-size: 30px;
+    }
 }
 
 #login input {
@@ -635,4 +648,16 @@ form div{
     align-content: center;
     align-items: center;
     text-align: center;
+}
+
+#mainNavbar{
+    color: black;
+    text-decoration: black;
+    display: flex;
+    justify-content: space-around;
+}
+
+a.nav-link {
+    color: black;
+    font-size: 28px;
 }
