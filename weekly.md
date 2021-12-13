@@ -60,3 +60,19 @@
 * Verificar entre todos la funcionalidad de la pagina.
 
 
+#### Sprint 6
+ 
+ #### Que hicimos:
+ 
+ * Una reunion temprana para asignar las tareas a los miembros del grupo.
+
+ #### En que nos complicamos:
+
+* 
+
+#### Que vamos a hacer:
+
+* Poder llegar a tiempo con las tareas asignadas para poder realizar un chequeo a tiempo y asi corregir errores o mejores algunos puntos para una mejor vista.
+* Verificar entre todos la funcionalidad de la pagina.
+
+
